@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofoliul lui Mihaita - dezvoltator web pasionat de IT, HTML, CSS, JS, Python, React.">
   <title>Portofoliul lui Mihaita</title>
+  <link rel="icon" href="https://via.placeholder.com/16.png" type="image/png">
+
   <style>
-    /* Reset și stil de bază */
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
@@ -19,6 +22,7 @@
       line-height: 1.6;
     }
 
+    /* Header */
     header {
       background: linear-gradient(90deg, #4a90e2, #50e3c2);
       color: white;
@@ -36,6 +40,7 @@
       color: #e0f7fa;
     }
 
+    /* Main */
     main {
       max-width: 1000px;
       margin: 40px auto;
@@ -49,24 +54,28 @@
       font-size: 2rem;
     }
 
+    /* Grid proiecte */
     .proiecte-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
+    /* Card proiect */
     .card-proiect {
       background-color: white;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s, transform 0.6s;
       text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
     }
 
-    .card-proiect:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+    .card-proiect.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .card-proiect img {
@@ -93,13 +102,20 @@
       background-color: #4a90e2;
       padding: 8px 15px;
       border-radius: 5px;
-      transition: background-color 0.3s;
+      transition: transform 0.3s, background-color 0.3s;
     }
 
     .card-proiect a:hover {
       background-color: #357ab7;
+      transform: scale(1.1);
     }
 
+    .card-proiect:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 20px 0;
@@ -108,6 +124,7 @@
       margin-top: 40px;
     }
 
+    /* Responsive */
     @media (max-width: 500px) {
       header h1 {
         font-size: 2rem;
@@ -153,5 +170,18 @@
   <footer>
     <p>© 2026 Mihaita | Dezvoltare web & IT</p>
   </footer>
+
+  <!-- Script fade-in -->
+  <script>
+    const cards = document.querySelectorAll('.card-proiect');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    cards.forEach(card => observer.observe(card));
+  </script>
 </body>
 </html>
