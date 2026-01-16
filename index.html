@@ -127,3 +127,160 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofoliul lui Mihaita</title>
+  <style>
+    /* Reset și stil de bază */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #e0f7fa;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section#proiecte h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #4a90e2;
+      font-size: 2rem;
+    }
+
+    .proiecte-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card-proiect {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .card-proiect:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+    }
+
+    .card-proiect img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .card-proiect h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .card-proiect p {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .card-proiect a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background-color: #4a90e2;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .card-proiect a:hover {
+      background-color: #357ab7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #4a90e2;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Salut! Sunt Mihaita</h1>
+    <p>Un viitor developer pasionat de IT și web</p>
+  </header>
+
+  <main>
+    <section id="proiecte">
+      <h2>Proiectele mele</h2>
+      <div class="proiecte-container">
+        <div class="card-proiect">
+          <img src="https://via.placeholder.com/300x150.png?text=Proiect+1" alt="Proiect 1">
+          <h3>Proiect 1</h3>
+          <p>O scurtă descriere despre proiectul meu 1. Tehnologii folosite: HTML, CSS, JS.</p>
+          <a href="https://github.com/mihaita/proiect1" target="_blank">Vezi pe GitHub</a>
+        </div>
+        <div class="card-proiect">
+          <img src="https://via.placeholder.com/300x150.png?text=Proiect+2" alt="Proiect 2">
+          <h3>Proiect 2</h3>
+          <p>O scurtă descriere despre proiectul meu 2. Tehnologii folosite: Python, Flask.</p>
+          <a href="https://github.com/mihaita/proiect2" target="_blank">Vezi pe GitHub</a>
+        </div>
+        <div class="card-proiect">
+          <img src="https://via.placeholder.com/300x150.png?text=Proiect+3" alt="Proiect 3">
+          <h3>Proiect 3</h3>
+          <p>O scurtă descriere despre proiectul meu 3. Tehnologii folosite: React, Node.js.</p>
+          <a href="https://github.com/mihaita/proiect3" target="_blank">Vezi pe GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Mihaita | Dezvoltare web & IT</p>
+  </footer>
+</body>
+</html>
